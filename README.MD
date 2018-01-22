@@ -7,16 +7,28 @@ in the `package.json` make sure to change the project information to your own.
 
 ## Technologies being used:
 **Base**
+
  -Express, Node, React-Redux, webpack, babel
+
+
 **Style**
+
   -Sass
+
+
 **Database**
+
  -PostgresSql, Sequelize
+
+
 **Testing**
+
   -Mocha, Chai, Jest, Enzyme
+
+
 ### In progress:
 
-- [ ] database model examples
+- [X] database model examples
 - [ ] default api examples
 - [ ] front end templates
 - [ ] default favicon
@@ -28,4 +40,4 @@ in the `package.json` make sure to change the project information to your own.
 
 
 ---
-_made by [KeriPMiller](github.com/keripmiller)_
+_made by [KeriPMiller](https://github.com/keripmiller)_

@@ -15,6 +15,13 @@ const User = db.define('User', {
   profileImg: {
     type: STRING,
     default: 'http://placecage.com/300/300'
+  },
+  email: {
+    type: STRING,
+    unique: true,
+    validate: {
+      isEmail: true
+    }
   }
 }, {
   getterMethods: {
