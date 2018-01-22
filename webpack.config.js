@@ -1,4 +1,4 @@
-onst {
+const {
   resolve
 } = require('path')
 

@@ -1,13 +1,14 @@
+'use strict'
+const debug = require('debug')('sql');
 const Sequelize = require('sequelize');
-const pjson = require(./package.json);
+const pkg = require('../../package.json');
+
 // default db name is set to project name
-const projectName = pjson.name;
+const name = process.env.DATABASE_NAME || pkg.name;
+const connectionString = process.env.DATABASE_connectionString || `postgres://localhost:5432/${name}`;
 
-const db = new Sequelize(
-  process.env.DATABASE_URL || `postgres://localhost:5432/${projectName}`, {
-    logging: false,
-    operatorsAliases: false
-  }
-);
-
-module.exports = db;
+module.exports = new Sequelize(connectionString, {
+  logging: debug, // export DEBUG=sql in the environment to get SQL queries
+  native: true,   // lets Sequelize know we can use pg-native for ~30% more speed. Take out if not using pg-native.
+  operatorsAliases: false // gets rid of Sequelize Opperators warning
+});

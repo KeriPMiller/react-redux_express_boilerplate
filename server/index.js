@@ -33,10 +33,10 @@ app.listen(port, () => {
   db.sync()
     .then(() => console.log(`Database has Synced`));
   // error handling
-  .catch(() => console.log(`Internal Server Error`, err, err.stack))
+    // .catch(() => console.error(`Internal Server Error`, err, err.stack));
 });
 
 // error-handling, should come AFTER all other routes
-app.use((err, req, res, next) =>
-  res.status(err.status || 500).send(err.message || 'Internal server error.')
-);
+// app.use((err, req, res, next) =>
+//   res.status(err.status || 500).send(err.message || 'Internal server error.')
+// );
