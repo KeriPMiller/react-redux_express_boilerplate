@@ -1,0 +1,35 @@
+{
+  "name": "react-redux_express_boilerplate",
+  "version": "1.0.0",
+  "description": "simple starting point for react-redux projects with an express server",
+  "main": "index.js",
+  "scripts": {
+    "start": "webpack -w & nodemon --watch server -e js, html server/index.js",
+    "dev": "webpack-dev-server --env.dev",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "webpack"
+  },
+  "keywords": [
+    "react-redux",
+    "express",
+    "boilerplate"
+  ],
+  "author": "KeriPMiller",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "morgan": "^1.9.0",
+    "pg": "^6",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^4.31.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-loader": "^7.1.2",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "nodemon": "^1.14.11",
+    "webpack": "^3.10.0"
+  }
+}
