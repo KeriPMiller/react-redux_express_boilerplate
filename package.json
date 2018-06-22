@@ -4,8 +4,8 @@
   "description": "simple starting point for react-redux projects with an express server",
   "main": "index.js",
   "scripts": {
-    "start": "webpack -w & nodemon --watch server -e js, html server/index.js",
-    "dev": "webpack-dev-server --env.dev",
+    "start": "concurrently --kill-others \"webpack -w\" \"nodemon --watch server -e js, html server/index.js\"",
+    "dev": "concurrently webpack-dev-server --env.dev",
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "webpack"
   },
@@ -18,6 +18,7 @@
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.2",
+    "concurrently": "^3.6.0",
     "express": "^4.16.2",
     "morgan": "^1.9.0",
     "pg": "^6",
